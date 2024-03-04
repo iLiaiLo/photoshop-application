@@ -1,0 +1,176 @@
+
+.container{
+    width:1000px;
+    height:700px;
+    border-radius:20px;
+    border:1px solid black;
+    margin-left:225px;
+    background-image: linear-gradient(to right, black ,rgb(0, 0, 60) );
+    
+}
+.content-filter{
+    width:300px;
+    height:auto;
+    border:1px solid white;
+    border-radius:20px;
+    margin:10px;
+    padding:20px;
+    display: flex;
+    justify-content: space-evenly;
+
+
+}
+
+
+
+.titles{
+    color:white;
+    border-radius: 10px;
+    display:flex;
+    flex-direction: column;
+    justify-content: space-around;
+    font-size:30px;
+}
+
+
+
+.range{
+    display:flex;
+    flex-direction: column;
+    justify-content: space-around;
+    border-radius: 10px;
+}
+input{
+    display:block;
+}
+.border-style{
+    width:300px;
+    height:auto;
+    border:1px solid white;
+    border-radius:20px;
+    margin-top:30px;
+    margin-left:10px;
+    padding:20px;
+    display: flex;
+    justify-content: space-evenly;
+
+}
+
+.content{
+    width:300px;
+    height:90px;
+    border-radius:20px;
+    overflow-y: scroll;
+    background:gray;
+    text-align:center;
+    position:absolute;
+ 
+}
+.content>div{
+    
+    padding:10px;
+    font-size:20px;
+    color:rgb(36, 36, 36);
+}
+.button{
+    background:transparent;
+    color:white;
+    border: 1px solid white;
+    border-radius: 20px;
+    width:300px;
+    height:50px;
+    font-size:30px;
+    outline:none;
+}
+.button:hover{
+    cursor:pointer;
+    text-decoration: underline;
+
+}
+.content>div:hover{
+    cursor:pointer;
+    background-color:rgb(99, 99, 99);
+}
+
+.style-pick{
+    margin-top: 40px;
+    margin-left:10px;
+
+
+}
+
+::-webkit-scrollbar {
+    width: 20px;
+  }
+  
+ 
+  ::-webkit-scrollbar-track {
+    box-shadow:inset 0 0 5px;
+    border-radius: 20px;
+  }
+   
+
+  ::-webkit-scrollbar-thumb {
+    background:rgb(32, 32, 32); 
+    border-radius: 10px;
+  }
+  
+
+  ::-webkit-scrollbar-thumb:hover {
+    background:rgb(61, 61, 61);
+  }
+
+.color-pick{
+    border:1px solid white;
+    width:200px;
+    height:50px;
+    border-radius:20px;
+    padding-left:10px;
+    display: flex;
+    justify-content: space-evenly;
+    float:right;
+    margin-right:450px;
+    
+   
+}
+.color-container{
+    display:flex;
+    flex-direction: column;
+    justify-content: space-around;
+    border-radius: 10px;
+    
+    
+
+}
+
+.color-input:hover{
+    cursor:pointer;
+}
+
+
+
+.image{
+    position:absolute;
+    width:500px;
+    height:270px;
+    background:white;
+    top:20px;
+    left:700px;
+    border-radius:20px;
+    box-shadow:inset 0 0 30px rgb(0, 0, 53);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+}
+
+.im{
+    
+    width:300px;
+    height:230px;
+   
+}
+
+#photo{
+    z-index: 31;
+}
+
