@@ -4,6 +4,7 @@
         <title>aplikacia</title>
         <meta name="wievport" charset="utf-8" content="width=devise-width initial-scale=1.0">
         <link rel="stylesheet" href="aplikacia.css">
+        <script src="aplikacia.js" type="module" defer></script>
     </head>
     <body>
         <div class="container">
@@ -18,69 +19,65 @@
                     <div>saturate</div>
                     <div>sepia</div>
                     <div>blur</div>
+                    <div>
+                        <button type="button" class="filterReset">reset</button>
+                    </div>
                 </div>
-                <div class="range">
-                    <input type="range" id="brightness" onchange="change()" value="100" min="0" max="1000" name="brightness">
-                    <input type="range" id="contrast" onchange="change()" value="100" min="0" max="1000" name="contrast">
-                    <input type="range" id="grayscale" onchange="change()" value="0" min="0" max="100" name="grayscale">
-                    <input type="range" id="hue-rotate" onchange="change()" value="0" min="0" max="360" name="hue-rotate">
-                    <input type="range" id="invert" onchange="change()" value="0" min="0" max="100" name="invert">
-                    <input type="range" id="opacity" onchange="change()" value="100" min="0" max="100" name="opacity">
-                    <input type="range" id="saturate" onchange="change()" value="1" min="0" max="100" name="saturate">
-                    <input type="range" id="sepia" onchange="change()" value="0" min="0" max="100" name="sepia">
-                    <input type="range" id="blur" onchange="change()" value="0" min="0" max="100" name="blur">
-
-                </div>
-
-               
-                
-
+                <form class="range">
+                    <input type="range" id="brightness"  value="100" min="0" max="1000" name="brightness">
+                    <input type="range" id="contrast"  value="100" min="0" max="1000" name="contrast">
+                    <input type="range" id="grayscale"  value="0" min="0" max="100" name="grayscale">
+                    <input type="range" id="hue-rotate"  value="0" min="0" max="360" name="hue-rotate">
+                    <input type="range" id="invert"  value="0" min="0" max="100" name="invert">
+                    <input type="range" id="opacity"  value="100" min="0" max="100" name="opacity">
+                    <input type="range" id="saturate"  value="1" min="0" max="100" name="saturate">
+                    <input type="range" id="sepia"  value="0" min="0" max="100" name="sepia">
+                    <input type="range" id="blur"  value="0" min="0" max="100" name="blur">
+                </form>
             </div>
             <div class="border-style">
                 <div class="titles">
                     <div>border width</div>
                     <div>border radius</div>
+                    <div>
+                        <button type="button" class="borderReset">reset</button>
+                    </div>
                 </div>
-                <div class="range">
-                <input type="range" id="border_width" onchange="change()" value="0" min="0" max="20">
-                <input type="range" id="border_radius" onchange="change()" value="0" min="0" max="140">
-                </div>
+                <form class="range">
+                    <input type="range" id="border_width"  value="0" min="0" max="20">
+                    <input type="range" id="border_radius"  value="0" min="0" max="140">
+                </form>
             </div>
             <div class="style-pick">
-                <button type="button" class="button" onclick="show_content()">pick border style</button>
-                <div class="content" id="content">
-                    <div id="solid" onclick="solid()">solid</div>
-                    <div id="dahsed" onclick="dashed()">dashed</div>
-                    <div id="dotted" onclick="dotted()">dotted</div>
-                    <div id="double" onclick="double()">double</div>
-                    <div id="groove" onclick="groove()">groove</div>
-                    <div id="inset" onclick="inset()">inset</div>
-                    <div id="outdet" onclick="outset()">outset</div>
-                    <div id="ridge" onclick="ridge()">ridge</div>
-                    <div id="none" onclick="no()">none</div>
+                <button type="button" class="button">pick border style</button>
+                <div class="border-styles" id="content">
+                    <div id="solid">solid</div>
+                    <div id="dahsed">dashed</div>
+                    <div id="dotted">dotted</div>
+                    <div id="double">double</div>
+                    <div id="groove">groove</div>
+                    <div id="inset">inset</div>
+                    <div id="outdet">outset</div>
+                    <div id="ridge">ridge</div>
+                    <div id="none">none</div>
                 </div>
 
                 <div class="color-pick">
                     <div class="titles">
                         <div>pick a color</div>
-                        </div>
-                <div class="color-container">
-                <input class="color-input" onchange="set_color()" id="col" type="color" value="#E91CB2">
+                    </div>
+                    <div class="color-container">
+                        <input class="color-input" id="col" type="color" value="#E91CB2">
+                    </div>
                 </div>
-            
-                    
-
-            </div>
            
                 
             </div>
             <div class="image">
-                <div class="im" id="div">
-                    <img id="photo" src="natureer.jpg" width="300px" height="230px">
+                <div class="im" id="image-frame">
+                    <img id="photo" src="/photoshop-application/assets/natureer.jpg" width="300px" height="230px">
                 </div>
-
             </div>
         </div>
     </body>
-    <script src="aplikacia.js"></script>
 </html>

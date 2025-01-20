@@ -1,84 +1,30 @@
-document.getElementById("content").style.display="none";
-var flag=true;
-function show_content(){
-    if(flag){
-        document.getElementById("content").style.display="block";
-        
-    }
-    else{
-        document.getElementById("content").style.display="none";
-    }
-    flag=!flag;
-   
-}
+import { resetFilter } from "./controllers/resetControllers/resetFilter.js";
+import { resetBorderStyles } from "./controllers/resetControllers/resetBorderStyles.js";
+import { showHide } from "./controllers/displayControllers/displaycontroller.js";
+import { styleController } from "./controllers/styleControllers/stylecontroller.js";
+import { changestyles } from "./controllers/styleControllers/stylecontroller.js";
+import { borderStyleSetter } from "./controllers/styleControllers/stylecontroller.js";
+import { colorInputSetter } from "./controllers/styleControllers/stylecontroller.js";
 
+const ranges=document.querySelectorAll(".range");
+const filterReset=document.querySelector(".filterReset");
+const borderReset=document.querySelector(".borderReset");
+const filterContaier=ranges[0];
+const borderStylesContainer=ranges[1];
+const borderStyles=document.querySelector(".border-styles");
+const showBorderStyles=document.querySelector(".button");
+const colorInput=document.querySelector(".color-input");
 
+filterReset.addEventListener("click",resetFilter)
 
+borderReset.addEventListener("click",resetBorderStyles)
 
-function change(){
-    let brightness=document.getElementById("brightness").value;
-    let contrast=document.getElementById("contrast").value;
-    let grayscale=document.getElementById("grayscale").value;
-    let hue_rotate=document.getElementById("hue-rotate").value;
-    let invert=document.getElementById("invert").value;
-    let opacity=document.getElementById("opacity").value;
-    let saturate=document.getElementById("saturate").value;
-    let sepia=document.getElementById("sepia").value;
-    let blur=document.getElementById("blur").value;
-    document.getElementById("photo").style.filter=`brightness(${brightness}%) contrast(${contrast}%) grayscale(${grayscale}%)
-     hue-rotate(${hue_rotate}deg) invert(${invert}%) opacity(${opacity}%) saturate(${saturate}) sepia(${sepia}%) blur(${blur}px) `
+showBorderStyles.addEventListener("click",showHide)
 
-     let border_width=document.getElementById("border_width").value;
-     let border_radius=document.getElementById("border_radius").value;
+filterContaier.addEventListener("change",styleController)
 
-     document.getElementById("div").style.borderRadius=`${border_radius}px`;
-     document.getElementById("photo").style.borderRadius=`${radius(border_radius,border_width)}px`;
-     document.getElementById("div").style.borderWidth=`${border_width}px`;
-     
+borderStylesContainer.addEventListener("click",changestyles)
 
-     function radius(border_radius,border_width){
-        let val=0;
-        if((border_radius-border_width)<0){
-            val=0;
-        }
-        else{
-            val=border_radius - border_width;
-        }
-        return val;
-    }
-}
+borderStyles.addEventListener("click",borderStyleSetter)
 
-function solid(){
-    document.getElementById("div").style.borderStyle="solid";
-}
-function dotted(){
-    document.getElementById("div").style.borderStyle="dotted";
-}
-function dashed(){
-    document.getElementById("div").style.borderStyle="dashed";
-}
-function double(){
-    document.getElementById("div").style.borderStyle="double";
-}
-function groove(){
-    document.getElementById("div").style.borderStyle="groove";
-}
-function inset(){
-    document.getElementById("div").style.borderStyle="inset";
-}
-function outset(){
-    document.getElementById("div").style.borderStyle="outset";
-}
-function ridge(){
-    document.getElementById("div").style.borderStyle="ridge";
-}
-function no(){
-    document.getElementById("div").style.borderStyle="none";
-}
-
-function set_color(){
-    let val=document.getElementById("col").value;
-    document.getElementById("div").style.borderColor=val;
-}
-
-
+colorInput.addEventListener("change",colorInputSetter)
