@@ -137,7 +137,6 @@ input{
 }
 
 
-
 .image{
     position:absolute;
     width:500px;
@@ -153,13 +152,30 @@ input{
 }
 
 .im{
-    
     width:300px;
     height:230px;
-   
 }
 
 #photo{
     z-index: 31;
+}
+
+.code-container{
+    width:400px;
+    margin-top:-28%;
+    margin-left: 55%;
+    height: fit-content;
+    padding: 10px 0;
+}
+
+.get-code{
+    border:2px solid white;
+    padding: 10px;
+    height: fit-content;
+    color:white;
+    font-size: 20px;
+    line-height: 30px;
+    border-radius: 10px;
+    margin-bottom: 10px;
 }
 
